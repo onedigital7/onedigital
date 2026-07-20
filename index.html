@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Happy Birthday</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- ==========================================================================
+       PUSAT PENGATURAN KONTEN, TEXT, FOTO, & MUSIK
+       ========================================================================== -->
+    <script type="text/javascript">
+        const CONFIG_SAYA = {
+            // 1. Nama Penerima Navigasi Header
+            namaPenerima: "Babe",
+
+            // 2. PIN Rahasia untuk Membuka Utama
+            pinRahasia: "3015",
+
+            // 3. Pengaturan Musik & Foto Apple Music
+            audioUrl: "https://cdn.jsdelivr.net/gh/iyamrm02-alt/foto-foto@c89b25df5c27802c5fac4625d6acb96d4a2357aa/untitled.mp3",
+            judulLagu: "Untitled",
+            penyanyiLagu: "Rex Orange",
+            fotoCoverLaguPotret: "https://cdn.jsdelivr.net/gh/iyamrm02-alt/foto-foto@64e49e5c8211e6535616afa91681badb55321fa5/23365621-7729-463B-A1CE-2BF2948AA875.jpeg",
+
+            // 4. Teks Surat Dalam Botol ("Dear You")
+            teksSuratDearYou: "okay so i kinda wanted to send this the way old sailors used to send word home sealed up, set adrift, and just trusting it'd find its way to you somehow.\n\nngl today's literally your day. i hope it feels exactly like that: unrushed, warm, and full of all the lil good things. you deserve every single bit of it, no cap.\n\nthank you for being the kind of person whose presence makes even the most ordinary days feel worth remembering. like fr, your presence just has a way of making simple days feel so special. this lil corner of the internet is just my small way of saying that.\n\nhowever you spend today, i just hope you're surrounded by people who love you just as much as i do, if not more.\n\nhappy birthday, my favorite person ever.",
+            teksSuratDearYouID: "Jadi, aku pengen ngirim ini dengan cara kayak pelaut zaman dulu ngirim kabar ke rumah — disegel, dilepas ke laut, dan percaya aja pesan ini bakal nemuin jalannya ke kamu.\n\nJujur, hari ini beneran hari kamu. Aku harap harinya terasa persis kayak gitu: santai, hangat, dan penuh sama hal-hal kecil yang manis. Kamu beneran pantes dapet semua kebahagiaan ini, tanpa ragu.\n\nMakasih ya udah jadi tipe orang yang kehadirannya bikin hari biasa aja jadi terasa berharga buat diingat. Beneran deh, kehadiran kamu tuh punya cara sendiri buat bikin hari yang biasa aja jadi terasa spesial. Sudut kecil di internet ini cuma cara simpel aku buat nyampaiin itu.\n\nBagaimanapun kamu ngabisin hari ini, aku cuma berharap kamu dikelilingi sama orang-orang yang sayang sama kamu sebanyak aku sayang kamu, atau bahkan lebih.\n\nSelamat ulang tahun, orang favoritku selamanya.",
+
+            // 5. Pengaturan Galeri Foto Pacar (3 Foto)
+            foto1: "https://cdn.jsdelivr.net/gh/iyamrm02-alt/foto-foto@64e49e5c8211e6535616afa91681badb55321fa5/23365621-7729-463B-A1CE-2BF2948AA875.jpeg",
+            teksFoto1: "ngl one smile from you and my whole day just gets so much better.",
+            teksFoto1ID: "Jujur, satu senyuman dari kamu aja langsung bikin seharian aku jauh lebih baik.",
+            
+            foto2: "https://cdn.jsdelivr.net/gh/iyamrm02-alt/foto-foto@64e49e5c8211e6535616afa91681badb55321fa5/23C62E21-FC20-4DC5-8A6C-F306DF860BA6.jpeg",
+            teksFoto2: "you're literally the reason my heart feels this full, no cap.",
+            teksFoto2ID: "Kamu beneran alasan kenapa hatiku bisa kerasa sepenuh ini, beneran deh.",
+            
+            foto3: "https://cdn.jsdelivr.net/gh/iyamrm02-alt/foto-foto@64e49e5c8211e6535616afa91681badb55321fa5/6C109237-54EA-4EE1-B43C-7491C63DA3E6.jpeg",
+            teksFoto3: "every single sec with you is hands down my fave.",
+            teksFoto3ID: "Setiap detik sama kamu tuh udah pasti jadi momen paling favoritku.",
+
+            // 6. Pengaturan Foto Kamu (2 Foto Tambahan)
+            fotoKamu1: "https://cdn.jsdelivr.net/gh/iyamrm02-alt/foto-foto@64e49e5c8211e6535616afa91681badb55321fa5/34540BDA-FD37-4B03-B851-D284E0AC82FA.jpeg",
+            teksFotoKamu1: "the face behind all those good night texts & virtual hugs.",
+            teksFotoKamu1ID: "Wajah di balik semua chat selamat malam & pelukan online buat kamu.",
+
+            fotoKamu2: "https://cdn.jsdelivr.net/gh/iyamrm02-alt/foto-foto@64e49e5c8211e6535616afa91681badb55321fa5/4E46C229-3F32-4D8A-8C10-E83E41E173D4.jpeg",
+            teksFotoKamu2: "saving this spot until we finally take a picture together in person.",
+            teksFotoKamu2ID: "Nyiapin tempat ini sampe nanti kita akhirnya foto berdua secara langsung.",
+
+            // 7. Pengaturan Chapter / Bab Cerita (Inggris)
+            chapter1Title: "where it all started", 
+            chapter1Desc: "that exact moment when everything just clicked, dan tiba-tiba semuanya mulai make so much sense.",
+            chapter2Title: "the quiet days", 
+            chapter2Desc: "literally cuma kamu, aku, and those lil simple moments yang ternyata ended up meaning everything.",
+            chapter3Title: "through the storms", 
+            chapter3Desc: "we've had our rough patches fr, ada badai dan chaos juga, but somehow kita selalu find our way back to each other.",
+            chapter4Title: "into the deep", 
+            chapter4Desc: "and here we are now fr, diving even deeper and ready for whatever chapter comes next, together.",
+
+            // 8. Pengaturan Chapter / Bab Cerita (Indonesia)
+            chapter1TitleID: "awal dari segalanya",
+            chapter1DescID: "momen pas semuanya terasa pas, dan tiba-tiba semuanya mulai jadi masuk akal banget.",
+            chapter2TitleID: "hari-hari yang tenang",
+            chapter2DescID: "beneran cuma kamu, aku, dan momen-momen simpel yang ternyata berakhir sangat berarti.",
+            chapter3TitleID: "melewati badai",
+            chapter3DescID: "kita emang pernah melewati masa-masa sulit, ada badai dan kekacauan, tapi kita selalu punya cara buat balik lagi.",
+            chapter4TitleID: "melangkah lebih dalam",
+            chapter4DescID: "dan di sinilah kita sekarang, makin erat dan siap buat bab apa pun selanjutnya, bareng-bareng."
+        };
+    </script>
+
+    <style>
+        /* ==========================================================================
+           1. SKEMA WARNA MAROON & TAMPILAN UTAMA
+           ========================================================================== */
+        #bday-root-container {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background: #2b0812 !important;
+            z-index: 999999 !important;
+            overflow-y: auto !important;
+            scroll-behavior: smooth !important;
+            -webkit-overflow-scrolling: touch !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            color: #FFFFFF !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+
+        .comments, .blog-pager, .post-footer, #header, .sidebar, footer, .post-title, .main-wrapper, .header-outer, .footer-outer {
+            display: none !important;
+        }
+
+        #bday-root-container * {
+            box-sizing: border-box !important;
+            -webkit-tap-highlight-color: transparent !important;
+        }
+
+        #bday-root-container::-webkit-scrollbar { width: 4px; }
+        #bday-root-container::-webkit-scrollbar-thumb {
+            background: rgba(244, 114, 182, 0.3);
+            border-radius: 10px;
+        }
+
+        /* TOMBOL TRANSLATE STYLING */
+        .btn-translate-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(244, 114, 182, 0.15);
+            border: 1px solid rgba(244, 114, 182, 0.4);
+            color: #F472B6;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+        .btn-translate-icon:hover {
+            background: #F472B6;
+            color: #2B0812;
+        }
+        .btn-translate-icon svg {
+            width: 10px;
+            height: 10px;
+            fill: currentColor;
+        }
+
+        /* EFEK BINTANG / BOKEH HUJAN NAIK DARI BAWAH KE ATAS */
+        .container-bokeh-naik {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .titik-bokeh {
+            position: absolute;
+            bottom: -20px;
+            background: radial-gradient(circle, rgba(244, 114, 182, 0.8) 0%, rgba(251, 113, 133, 0.3) 60%, transparent 100%);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: terbangKeAtas linear infinite;
+        }
+
+        @keyframes terbangKeAtas {
+            0% { transform: translateY(0) scale(0.8); opacity: 0; }
+            20% { opacity: 0.7; }
+            80% { opacity: 0.7; }
+            100% { transform: translateY(-105vh) scale(1.2); opacity: 0; }
+        }
+
+        .titik-bokeh:nth-child(1) { left: 10%; width: 6px; height: 6px; animation-duration: 12s; animation-delay: 0s; }
+        .titik-bokeh:nth-child(2) { left: 25%; width: 10px; height: 10px; animation-duration: 16s; animation-delay: 2s; }
+        .titik-bokeh:nth-child(3) { left: 40%; width: 5px; height: 5px; animation-duration: 10s; animation-delay: 4s; }
+        .titik-bokeh:nth-child(4) { left: 55%; width: 8px; height: 8px; animation-duration: 14s; animation-delay: 1s; }
+        .titik-bokeh:nth-child(5) { left: 70%; width: 12px; height: 12px; animation-duration: 18s; animation-delay: 3s; }
+        .titik-bokeh:nth-child(6) { left: 85%; width: 6px; height: 6px; animation-duration: 11s; animation-delay: 5s; }
+        .titik-bokeh:nth-child(7) { left: 95%; width: 9px; height: 9px; animation-duration: 15s; animation-delay: 2.5s; }
+
+        /* PASSCODE SCREEN */
+        #page-sandi {
+            display: flex; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 1000000; background: rgba(43, 8, 18, 0.98); flex-direction: column; align-items: center; justify-content: center; padding: 15px;
+            overflow-y: auto;
+        }
+        .kartu-sandi {
+            background: rgba(61, 12, 27, 0.9); border: 1px solid rgba(244, 114, 182, 0.3);
+            border-radius: 16px; padding: 22px 20px; width: 270px; max-width: 90vw; text-align: center;
+            display: flex; flex-direction: column; align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6); z-index: 2;
+        }
+        .ikon-lingkaran-top { width: 32px; height: 32px; border: 1px solid rgba(244, 114, 182, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; background: rgba(244, 114, 182, 0.1); }
+        .ikon-lingkaran-top svg { width: 14px; height: 14px; fill: #F472B6; }
+        .garis-tipis-top { width: 20px; height: 1px; background: rgba(244, 114, 182, 0.3); margin-bottom: 8px; }
+        .teks-top-kartu { font-size: 0.55rem; letter-spacing: 2px; font-weight: 600; color: #F472B6 !important; text-transform: uppercase; margin-bottom: 6px; }
+        .judul-kartu { font-size: 1.05rem; font-weight: 700; color: #FFFFFF !important; margin: 0 0 6px 0; }
+        .penjelasan-kartu { font-size: 0.7rem; color: rgba(251, 207, 232, 0.8) !important; line-height: 1.35; margin-bottom: 16px; font-weight: 300; }
+        .container-kotak-sandi { display: flex; gap: 8px; margin-bottom: 16px; justify-content: center; align-items: center; }
+        .kotak-input-sandi { width: 34px; height: 34px; border: 1px solid rgba(244, 114, 182, 0.4); border-radius: 6px; background: rgba(0, 0, 0, 0.4); text-align: center; font-weight: 700; outline: none; padding: 0; line-height: 34px; font-size: 1.2rem; color: #F472B6 !important; -webkit-text-security: disc !important; text-security: disc !important; }
+        .kotak-input-sandi:focus { border-color: #F472B6; }
+        .tombol-unlock { background: #F472B6; color: #2B0812; border: none; padding: 8px 20px; font-size: 0.8rem; font-weight: 700; border-radius: 50px; cursor: pointer; transition: transform 0.2s; }
+        .tombol-unlock:active { transform: scale(0.95); }
+        .sandi-salah-animasi { animation: getarSalah 0.3s ease-in-out; border-color: #ff4a4a !important; }
+        @keyframes getarSalah { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+        #main-scroll-wrapper { display: none; width: 100%; position: relative; z-index: 2; }
+
+        .section-bday-flow {
+            width: 100%; padding: 80px 15px 35px 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; box-sizing: border-box;
+        }
+
+        /* NAVIGASI HEADER */
+        .nav-atas {
+            position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; padding: 12px 20px; background: rgba(43, 8, 18, 0.92);
+            border-bottom: 1px solid rgba(244, 114, 182, 0.2); backdrop-filter: blur(8px);
+        }
+        .wrapper-brand-nav { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+        .ikon-human-nav { width: 14px; height: 14px; fill: #F472B6; }
+        .judul-nav-emas { font-size: 0.82rem !important; font-weight: 700; color: #F472B6; letter-spacing: 0.3px; white-space: nowrap; }
+        .menu-kanan-list { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; overflow-x: auto; }
+        .item-menu { color: rgba(251, 207, 232, 0.6); font-size: 0.72rem; font-weight: 600; cursor: pointer; padding-bottom: 2px; border-bottom: 2px solid transparent; white-space: nowrap; }
+        .item-menu:hover, .item-menu.aktif-menu { color: #FFFFFF; border-bottom-color: #F472B6; }
+
+        .judul-aesthetic-miring { font-family: 'Playfair Display', serif !important; font-style: italic !important; font-weight: 700 !important; color: #FFFFFF !important; }
+        .baris-j-1, .baris-j-2 { font-size: 2.2rem; line-height: 1.25; margin-bottom: 4px; }
+        .intro-bab-awal h2 { font-size: 1.8rem; line-height: 1.25; margin-bottom: 8px; }
+        .teks-gradasi-pink { color: #F472B6 !important; }
+        .gradasi-emas-kuning { color: #FDE68A !important; display: inline-block; }
+        .teks-emas-label { color: #F472B6 !important; }
+
+        .konten-utama-aliran { width: 100%; max-width: 650px; display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 auto; }
+        .teks-kecil-tide { font-size: 0.65rem; font-weight: 700; color: #F472B6; opacity: 0.9; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+        .paragraf-campuran { font-size: 0.85rem; color: rgba(251, 207, 232, 0.85); line-height: 1.5; margin: 10px 0 18px 0; max-width: 500px; }
+        .area-tombol-aksi { display: flex; gap: 10px; margin-bottom: 10px; justify-content: center; }
+        .btn-descent { background: #F472B6; color: #2B0812; border: none; padding: 8px 18px; font-size: 0.8rem; font-weight: 700; border-radius: 8px; cursor: pointer; }
+        .btn-straight-letter { background: transparent; color: #FFFFFF; border: 1.5px solid rgba(244, 114, 182, 0.6); padding: 7px 18px; font-size: 0.8rem; font-weight: 600; border-radius: 8px; cursor: pointer; }
+
+        .pembatas-arus-laut { width: 100vw !important; margin-left: calc(-50vw + 50%); display: block; margin-top: 30px; pointer-events: none; overflow: hidden; line-height: 0; }
+        .pembatas-arus-laut svg { width: 100% !important; height: 30px; display: block; }
+        .pembatas-arus-laut path { fill: none !important; stroke: rgba(244, 114, 182, 0.25); stroke-width: 1.5px; }
+
+        /* TIMELINE CHAPTER */
+        .wrapper-descent-global { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 650px; margin: 0 auto; }
+        .aliran-bab-konten { display: flex; flex-direction: column; align-items: center; width: 100%; }
+        .intro-bab-awal { text-align: center; max-width: 550px; margin-bottom: 22px !important; }
+        
+        .pembungkus-item-bab { display: flex; flex-direction: column; max-width: 550px; width: 100%; padding: 0 0 28px 22px !important; position: relative; }
+        .pembungkus-item-bab:last-child { padding-bottom: 5px !important; }
+        .pembungkus-item-bab::before { content: ''; position: absolute; left: 6px; top: 10px; width: 2px; height: 100%; background: rgba(244, 114, 182, 0.15); z-index: 1; }
+        .pembungkus-item-bab:last-child::before { display: none; }
+        
+        .jalur-emas-progress { position: absolute; left: 6px; top: 10px; width: 2px; height: 0%; background: #F472B6; box-shadow: 0 0 8px rgba(244, 114, 182, 0.6); z-index: 2; transition: height 0.15s ease-out; }
+        .titik-bab-indikator { position: absolute; left: 3px; top: 4px; width: 8px; height: 8px; border-radius: 50%; background: rgba(244, 114, 182, 0.3); z-index: 3; transition: background 0.3s ease; }
+        .pembungkus-item-bab.lewat-scroll .titik-bab-indikator { background: #F472B6; box-shadow: 0 0 8px #F472B6; }
+
+        /* KUSTOMISASI TEXT CHAPTER */
+        .teks-kedalaman-bab-spesifik { 
+            font-family: 'Playfair Display', serif !important; 
+            font-style: italic !important; 
+            font-size: 0.65rem; 
+            font-weight: 700; 
+            color: rgba(244, 114, 182, 0.8) !important; 
+            letter-spacing: 0.5px; 
+            margin: 0 0 5px 0 !important; 
+            text-transform: lowercase; 
+        }
+        .kotak-bab-cerita { background: rgba(61, 12, 27, 0.85); border: 1px solid rgba(244, 114, 182, 0.25) !important; border-radius: 8px; padding: 14px 16px !important; text-align: left; width: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+        .header-bab-label { 
+            font-family: 'Playfair Display', serif !important; 
+            font-style: italic !important; 
+            font-size: 0.65rem; 
+            font-weight: 700; 
+            letter-spacing: 1px;
+            color: #F472B6 !important;
+        }
+        .kotak-bab-cerita h3 { 
+            font-family: 'Playfair Display', serif !important; 
+            font-style: italic !important; 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            margin: 3px 0 6px 0 !important; 
+            color: #FFFFFF !important; 
+        }
+        .kotak-bab-cerita p { 
+            font-family: 'Plus Jakarta Sans', sans-serif !important; 
+            font-style: normal !important; 
+            font-size: 0.75rem; 
+            color: rgba(251, 207, 232, 0.85); 
+            line-height: 1.45; 
+            margin: 0; 
+        }
+
+        /* ==========================================================================
+           GALERI RESPONSIF KONSISTEN (3 FOTO PACAR 100% SIZE, 2 FOTO KAMU 70% SIZE)
+           ========================================================================== */
+        .wrapper-galeri-dua-bagian { width: 100%; max-width: 650px; display: flex; flex-direction: column; gap: 15px; margin-top: 10px; }
+        
+        .grid-gallery-baris { 
+            display: grid !important; 
+            grid-template-columns: repeat(3, 1fr) !important; 
+            gap: 10px; 
+            width: 100% !important; 
+            margin: 0 auto !important;
+        }
+
+        .area-bawah-galeri-kamu {
+            width: 70% !important;
+            margin: 0 auto !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .grid-gallery-baris-kamu { 
+            display: grid !important; 
+            grid-template-columns: repeat(2, 1fr) !important; 
+            gap: 10px; 
+            width: 100% !important; 
+        }
+        
+        .item-kartu-foto { display: flex; flex-direction: column; width: 100% !important; }
+        .bingkai-gambar-tetap { width: 100%; aspect-ratio: 1 / 1; border-radius: 8px; border: 1px solid rgba(244, 114, 182, 0.3); background: #3d0c1b; overflow: hidden; transition: transform 0.3s ease; }
+        .bingkai-gambar-tetap:hover { transform: translateY(-3px); }
+        .bingkai-gambar-tetap img { width: 100%; height: 100%; object-fit: cover; }
+        .keterangan-teks-foto { font-size: 0.6rem; color: rgba(251, 207, 232, 0.85); line-height: 1.25; margin-top: 6px; text-align: left; font-weight: 300; }
+        
+        .label-sub-galeri { font-size: 0.65rem; font-weight: 700; color: #FDE68A; letter-spacing: 1.5px; text-transform: uppercase; margin: 10px 0 10px 0; text-align: center; }
+
+        /* ANIMASI BOTOL FLOATING */
+        .sec-botol-utama { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; }
+        .teks-botol-atas { font-size: 0.65rem; letter-spacing: 2.5px; font-weight: 600; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; margin-bottom: 8px; }
+        .judul-botol-besar { font-size: 2.2rem; font-weight: 700; color: #FFFFFF; margin: 0 0 15px 0; }
+        .kata-found { color: #FDE68A; font-style: italic; font-family: 'Playfair Display', serif; }
+        
+        .wrapper-gambar-botol {
+            position: relative; width: 125px; height: 185px; cursor: pointer; margin: 5px 0 15px 0;
+            animation: botolMengambangSmooth 3.5s ease-in-out infinite;
+            filter: drop-shadow(0 10px 15px rgba(244, 114, 182, 0.2));
+        }
+        @keyframes botolMengambangSmooth {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(-2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .petunjuk-tap-botol { font-size: 0.65rem; letter-spacing: 2px; font-weight: 700; color: #F472B6; text-transform: uppercase; }
+
+        .sec-surat-wrapper { width: 100%; max-width: 550px; display: none; opacity: 0; margin-top: 20px; transition: opacity 0.5s ease; }
+        .sec-surat-wrapper.muncul { display: block; opacity: 1; }
+        .kotak-surat-elegan { background: rgba(61, 12, 27, 0.95); border: 1px solid rgba(244, 114, 182, 0.3); border-radius: 12px; padding: 20px; text-align: left; }
+        .header-surat-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .judul-dear-you { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.5rem; color: #FDE68A; margin: 0; }
+        .isi-teks-ketik { font-size: 0.88rem; color: rgba(255, 255, 255, 0.9); line-height: 1.6; font-weight: 300; white-space: pre-wrap; }
+        .kursor-ketik { display: inline-block; width: 2px; height: 1em; background-color: #F472B6; margin-left: 2px; vertical-align: middle; }
+        .penutup-surat-kanan { text-align: right; font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.9rem; color: #F472B6; margin-top: 18px; opacity: 0; transition: opacity 0.5s ease; }
+
+        /* WISHES 3 KOLOM BERDAMPINGAN */
+        .sec-wishes-wrapper { width: 100%; max-width: 700px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .grid-wishes-3kolom { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px; width: 100%; margin-top: 15px; }
+        .kotak-wish-item { background: rgba(61, 12, 27, 0.8); border: 1px solid rgba(244, 114, 182, 0.2); border-radius: 10px; padding: 12px 10px; text-align: left; position: relative; min-height: 110px; }
+        .ikon-bulat-topleft { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; background: rgba(244, 114, 182, 0.1); border: 1px solid rgba(244, 114, 182, 0.3); }
+        .ikon-svg-logo { width: 14px; height: 14px; fill: none; stroke: #F472B6; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+        .isi-teks-wish { font-size: 0.72rem; color: rgba(255, 255, 255, 0.85); line-height: 1.35; margin: 0; font-weight: 300; }
+
+        /* LILIN MATI & PENUTUP */
+        .sec-lilin-wrapper { width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 15px; }
+        .wrapper-5-lilin { display: flex; align-items: flex-end; justify-content: center; gap: 18px; height: 110px; margin-bottom: 20px; }
+        .batang-lilin { width: 14px; background: linear-gradient(to right, #F472B6, #FB7185); border-radius: 3px 3px 2px 2px; position: relative; display: flex; justify-content: center; }
+        .lilin-1 { height: 50px; } .lilin-2 { height: 70px; } .lilin-3 { height: 90px; } .lilin-4 { height: 70px; } .lilin-5 { height: 50px; }
+        .sumbu-lilin { position: absolute; top: -6px; width: 2px; height: 6px; background: #4A5568; }
+        .api-lilin { position: absolute; top: -16px; width: 8px; height: 12px; background: #FDE68A; border-radius: 50% 50% 35% 35%; transition: opacity 0.5s ease; }
+        .api-lilin.padam { opacity: 0; }
+
+        .wrapper-setelah-padam { display: flex; flex-direction: column; align-items: center; opacity: 0; transition: opacity 0.6s ease; pointer-events: none; }
+        .wrapper-setelah-padam.aktif { opacity: 1; pointer-events: auto; }
+        .judul-wish-granted { font-size: 1.5rem; font-weight: 700; margin-bottom: 18px; }
+        .btn-send-reply-wa { display: inline-flex; align-items: center; gap: 8px; background: #F472B6; color: #2B0812; font-weight: 700; font-size: 0.82rem; padding: 10px 22px; border-radius: 50px; text-decoration: none; margin-bottom: 10px; }
+        .ikon-wa-svg { width: 16px; height: 16px; fill: #2B0812; }
+        .btn-float-back { background: transparent; color: rgba(251, 207, 232, 0.85); border: 1px solid rgba(244, 114, 182, 0.4); padding: 8px 20px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; cursor: pointer; }
+
+        /* WIDGET APPLE MUSIC COMPACT */
+        .apple-music-container {
+            position: fixed; bottom: 15px; left: 15px; 
+            width: 140px; background: rgba(61, 12, 27, 0.95); border: 1px solid rgba(244, 114, 182, 0.3); border-radius: 12px;
+            padding: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); z-index: 99999;
+            display: flex; flex-direction: column; overflow: hidden; transition: all 0.25s ease;
+            backdrop-filter: blur(10px);
+        }
+        .apple-music-container.mode-mini {
+            width: 36px; height: 36px; border-radius: 50%; padding: 0; justify-content: center; align-items: center; cursor: pointer;
+            background: #F472B6; border-color: #F472B6;
+        }
+        .apple-window-header { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 6px; }
+        .apple-dots { display: flex; gap: 4px; }
+        .apple-dot { width: 6px; height: 6px; border-radius: 50%; cursor: pointer; }
+        .apple-dot.red { background: #FF5F56; } .apple-dot.yellow { background: #FFBD2E; }
+        .btn-toggle-size { background: transparent; border: none; color: rgba(251, 207, 232, 0.7); font-size: 0.55rem; cursor: pointer; padding: 0; }
+        
+        .area-foto-musik { width: 100%; aspect-ratio: 1 / 1; background: #000; border-radius: 6px; overflow: hidden; }
+        .area-foto-musik img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .judul-lagu { font-size: 0.7rem; font-weight: 700; color: #FFFFFF; margin: 4px 0 1px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; }
+        .penyanyi-lagu { font-size: 0.6rem; color: rgba(251, 207, 232, 0.6); margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; }
+        .bar-durasi-container { width: 100%; height: 3px; background: rgba(244, 114, 182, 0.2); border-radius: 2px; margin-bottom: 6px; position: relative; }
+        .bar-durasi-fill { position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: #F472B6; }
+        .kontrol-musik-row { display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .tombol-audio-btn { background: #F472B6; border: none; color: #2B0812; cursor: pointer; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0; }
+        .tombol-audio-btn.play-mode { width: 26px; height: 26px; }
+        .tombol-audio-btn svg { width: 10px; height: 10px; fill: #2B0812; }
+        
+        .mini-icon-svg { display: none; width: 16px; height: 16px; fill: #2B0812; }
+        .mode-mini .mini-icon-svg { display: block; }
+        .mode-mini .apple-window-header, .mode-mini .area-foto-musik, .mode-mini .judul-lagu, .mode-mini .penyanyi-lagu, .mode-mini .bar-durasi-container, .mode-mini .kontrol-musik-row { display: none !important; }
+
+        /* ==========================================================================
+           WARNING OVERLAY LANDSCAPE AESTHETIC (GLASSMORPHISM & PINK GLOW)
+           ========================================================================== */
+        #landscape-warning {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000005;
+            background: rgba(61, 12, 27, 0.82);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(244, 114, 182, 0.4);
+            border-radius: 30px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(244, 114, 182, 0.15);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        #landscape-warning.tampil {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #landscape-warning span {
+            font-size: 0.7rem;
+            color: rgba(251, 207, 232, 0.95);
+            font-weight: 400;
+            white-space: nowrap;
+            letter-spacing: 0.3px;
+        }
+
+        #landscape-warning b {
+            color: #F472B6;
+            font-weight: 600;
+        }
+
+        .icon-warning {
+            width: 14px;
+            height: 14px;
+            fill: #F472B6;
+            flex-shrink: 0;
+            animation: rotasiGoyang 2s ease-in-out infinite;
+        }
+
+        @keyframes rotasiGoyang {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-90deg); }
+        }
+
+        .btn-close-warning {
+            background: transparent;
+            border: none;
+            color: rgba(244, 114, 182, 0.6);
+            font-size: 0.75rem;
+            cursor: pointer;
+            padding: 0 2px;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        .btn-close-warning:hover {
+            color: #F472B6;
+        }
+
+        @media (orientation: landscape) {
+            #landscape-warning {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-atas { padding: 10px 12px; }
+            .baris-j-1, .baris-j-2 { font-size: 1.8rem; }
+            .grid-wishes-3kolom { gap: 6px; }
+            .kotak-wish-item { padding: 8px 6px; min-height: 95px; }
+            .isi-teks-wish { font-size: 0.62rem; }
+            .apple-music-container { width: 125px; bottom: 10px; left: 10px; }
+            #landscape-warning { bottom: 12px; padding: 7px 14px; max-width: 90vw; }
+            #landscape-warning span { font-size: 0.62rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- BANNER WARNING LANDSCAPE AESTHETIC -->
+<div id="landscape-warning">
+    <svg viewBox="0 0 24 24" class="icon-warning">
+        <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+    </svg>
+    <span>Gunakan mode <b>landscape</b> buat tampilan lebih jelas ✨</span>
+    <button class="btn-close-warning" onclick="tutupWarningLandscape()">✕</button>
+</div>
+
+<div id="bday-root-container">
+
+    <!-- BOKEH / TITIK BINTANG -->
+    <div class="container-bokeh-naik">
+        <div class="titik-bokeh"></div>
+        <div class="titik-bokeh"></div>
+        <div class="titik-bokeh"></div>
+        <div class="titik-bokeh"></div>
+        <div class="titik-bokeh"></div>
+        <div class="titik-bokeh"></div>
+        <div class="titik-bokeh"></div>
+    </div>
+
+    <!-- ================= URUTAN 1: PASSCODE ================= -->
+    <div id="page-sandi">
+        <div class="kartu-sandi" id="blokKartuSandi">
+            <div class="ikon-lingkaran-top">
+                <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            </div>
+            <div class="garis-tipis-top"></div>
+            <span class="teks-top-kartu">For Your Eyes Only</span>
+            <h2 class="judul-kartu">Enter Secret Code</h2>
+            <p class="penjelasan-kartu">Something has been waiting just past the surface, only for kamu.</p>
+            <div class="container-kotak-sandi">
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="kotak-input-sandi" data-index="0" maxlength="1">
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="kotak-input-sandi" data-index="1" maxlength="1">
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="kotak-input-sandi" data-index="2" maxlength="1">
+                <input type="number" inputmode="numeric" pattern="[0-9]*" class="kotak-input-sandi" data-index="3" maxlength="1">
+            </div>
+            <button class="tombol-unlock" id="btnUnlockTrigger">Unlock it &rarr;</button>
+        </div>
+    </div>
+
+    <!-- MAIN SCROLL WRAPPER -->
+    <div id="main-scroll-wrapper">
+        
+        <!-- NAV ATAS -->
+        <nav class="nav-atas">
+            <div class="wrapper-brand-nav">
+                <svg class="ikon-human-nav" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <div class="judul-nav-emas" id="nav-recipient-name">Resti's Birthday</div>
+            </div>
+            <ul class="menu-kanan-list">
+                <li class="item-menu aktif-menu" id="menu-utama" onclick="lompatKeSection('section-surface')">Surface</li>
+                <li class="item-menu" id="menu-memories" onclick="lompatKeSection('section-deep-memories')">Our Memories</li>
+                <li class="item-menu" id="menu-gallery" onclick="lompatKeSection('section-deep-gallery')">Gallery</li>
+                <li class="item-menu" id="menu-letter" onclick="lompatKeSection('section-the-letter')">The Letter</li>
+                <li class="item-menu" id="menu-wishes" onclick="lompatKeSection('sec-wishes')">Wishes</li>
+            </ul>
+        </nav>
+
+        <!-- ================= URUTAN 2: HAPPY BIRTHDAY ================= -->
+        <section class="section-bday-flow" id="section-surface">
+            <div class="konten-utama-aliran">
+                <div class="teks-kecil-tide">A MESSAGE CARRIED IN ON THE TIDE, FOR YOU</div>
+                <div>
+                    <h1 class="baris-j-1 judul-aesthetic-miring">Happy Birthday,</h1>
+                    <h1 class="baris-j-2 judul-aesthetic-miring teks-gradasi-pink">My Favorite Person</h1>
+                </div>
+                <p class="paragraf-campuran" id="txt-intro-main">
+                    Somewhere past the breakers, ada a letter yang udah lama waiting for this day. Scroll down, the tide is coming in, dan ternyata dia bawa something special just for kamu.
+                </p>
+                <button class="btn-translate-icon" onclick="toggleTranslateIntro()"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2.1l1.1-3h3.6l1.1 3H22L18.5 10zm-2.62 7l1.62-4.41L19.12 17h-3.24z"/></svg> Translate</button>
+                <div class="area-tombol-aksi" style="margin-top: 12px;">
+                    <button class="btn-descent" onclick="lompatKeSection('section-deep-memories')">Begin the Descent &darr;</button>
+                    <button class="btn-straight-letter" onclick="lompatKeSection('section-the-letter')">Jump Straight to Letter</button>
+                </div>
+            </div>
+            <div class="pembatas-arus-laut"><svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,10 C360,35 480,0 720,20 C960,40 1120,5 1440,25"></path></svg></div>
+        </section>
+
+        <!-- ================= URUTAN 3: CHAPTERS ================= -->
+        <section class="section-bday-flow" id="section-deep-memories">
+            <div class="wrapper-descent-global">
+                <div class="aliran-bab-konten">
+                    <div class="intro-bab-awal">
+                        <span class="teks-kecil-tide" id="txt-header-chap-sub">THE DESCENT BEGINS, ARE YOU READY</span>
+                        <button class="btn-translate-icon" onclick="toggleTranslateChapSub()"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2.1l1.1-3h3.6l1.1 3H22L18.5 10zm-2.62 7l1.62-4.41L19.12 17h-3.24z"/></svg> Translate</button>
+                        <h2 class="judul-aesthetic-miring" id="txt-chap-title-main" style="margin-top: 6px;">Chapters from <span class="gradasi-emas-kuning">our story</span></h2>
+                        <p class="paragraf-campuran" id="txt-chap-desc-main" style="margin: 0;">
+                            Every relationship has its own currents, ada hari yang calm, ada momen yang penuh waves, dan ada little moments yang mungkin hampir terlupakan. Here are a few memories yang deserve to come back to the surface.
+                        </p>
+                    </div>
+                    
+                    <div class="pembungkus-item-bab" id="item-bab-1">
+                        <div class="titik-bab-indikator"></div>
+                        <div class="jalur-emas-progress"></div>
+                        <div class="teks-kedalaman-bab-spesifik" id="label-sub-chap1">chapter 01</div>
+                        <div class="kotak-bab-cerita">
+                            <div class="header-bab-label teks-emas-label" id="label-head-chap1"></div>
+                            <h3 id="txt-chap1-title">where it all started</h3>
+                            <p id="txt-chap1-desc">that exact moment when everything just clicked, dan tiba-tiba semuanya mulai make so much sense.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pembungkus-item-bab" id="item-bab-2">
+                        <div class="titik-bab-indikator"></div>
+                        <div class="jalur-emas-progress"></div>
+                        <div class="teks-kedalaman-bab-spesifik" id="label-sub-chap2">chapter 02</div>
+                        <div class="kotak-bab-cerita">
+                            <div class="header-bab-label teks-emas-label" id="label-head-chap2"></div>
+                            <h3 id="txt-chap2-title">the quiet days</h3>
+                            <p id="txt-chap2-desc">literally cuma kamu, aku, and those lil simple moments yang ternyata ended up meaning everything.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pembungkus-item-bab" id="item-bab-3">
+                        <div class="titik-bab-indikator"></div>
+                        <div class="jalur-emas-progress"></div>
+                        <div class="teks-kedalaman-bab-spesifik" id="label-sub-chap3">chapter 03</div>
+                        <div class="kotak-bab-cerita">
+                            <div class="header-bab-label teks-emas-label" id="label-head-chap3"></div>
+                            <h3 id="txt-chap3-title">through the storms</h3>
+                            <p id="txt-chap3-desc">we've had our rough patches fr, ada badai dan chaos juga, but somehow kita selalu find our way back to each other.</p>
+                        </div>
+                    </div>
+
+                    <div class="pembungkus-item-bab" id="item-bab-4">
+                        <div class="titik-bab-indikator"></div>
+                        <div class="jalur-emas-progress"></div>
+                        <div class="teks-kedalaman-bab-spesifik" id="label-sub-chap4">chapter 04</div>
+                        <div class="kotak-bab-cerita">
+                            <div class="header-bab-label teks-emas-label" id="label-head-chap4"></div>
+                            <h3 id="txt-chap4-title">into the deep</h3>
+                            <p id="txt-chap4-desc">and here we are now fr, diving even deeper and ready for whatever chapter comes next, together.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pembatas-arus-laut"><svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,15 C360,40 480,5 720,25 C960,40 1120,5 1440,20"></path></svg></div>
+        </section>
+
+        <!-- ================= URUTAN 4: GALLERY ================= -->
+        <section class="section-bday-flow" id="section-deep-gallery">
+            <div class="wrapper-descent-global">
+                <div class="aliran-bab-konten">
+                    <div class="intro-bab-awal">
+                        <span class="teks-kecil-tide">WASHED ASHORE, JUST FOR YOU</span>
+                        <h2 class="judul-aesthetic-miring">A few of my <span class="gradasi-emas-kuning">favorite shots</span></h2>
+                        <p class="paragraf-campuran" style="margin: 2px 0 0 0;">
+                            Hover or tap any photo to look closer.
+                            <button class="btn-translate-icon" onclick="toggleTranslateGallery()"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2.1l1.1-3h3.6l1.1 3H22L18.5 10zm-2.62 7l1.62-4.41L19.12 17h-3.24z"/></svg> Translate Captions</button>
+                        </p>
+                    </div>
+
+                    <div class="wrapper-galeri-dua-bagian">
+                        <!-- 3 FOTO PACAR (KONSISTEN 100% SIZE) -->
+                        <div class="grid-gallery-baris">
+                            <div class="item-kartu-foto"><div class="bingkai-gambar-tetap"><img id="img-gallery-1" src="" alt="Foto 1"></div><p class="keterangan-teks-foto" id="txt-foto-1"></p></div>
+                            <div class="item-kartu-foto"><div class="bingkai-gambar-tetap"><img id="img-gallery-2" src="" alt="Foto 2"></div><p class="keterangan-teks-foto" id="txt-foto-2"></p></div>
+                            <div class="item-kartu-foto"><div class="bingkai-gambar-tetap"><img id="img-gallery-3" src="" alt="Foto 3"></div><p class="keterangan-teks-foto" id="txt-foto-3"></p></div>
+                        </div>
+
+                        <!-- AREA BAWAH: SUB-TITLE & 2 FOTO KAMU (KONSISTEN 70% SIZE CENTER) -->
+                        <div class="area-bawah-galeri-kamu">
+                            <div class="label-sub-galeri">&mdash; and the person behind it all &mdash;</div>
+                            <div class="grid-gallery-baris-kamu">
+                                <div class="item-kartu-foto"><div class="bingkai-gambar-tetap"><img id="img-gallery-kamu-1" src="" alt="Foto Kamu 1"></div><p class="keterangan-teks-foto" id="txt-foto-kamu-1"></p></div>
+                                <div class="item-kartu-foto"><div class="bingkai-gambar-tetap"><img id="img-gallery-kamu-2" src="" alt="Foto Kamu 2"></div><p class="keterangan-teks-foto" id="txt-foto-kamu-2"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pembatas-arus-laut"><svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,10 C300,35 500,5 720,22 C940,35 1140,0 1440,28"></path></svg></div>
+        </section>
+
+        <!-- ================= URUTAN 5: BOTOL & SURAT ================= -->
+        <section class="section-bday-flow" id="section-the-letter">
+            <div class="sec-botol-utama">
+                <span class="teks-botol-atas">A BOTTLE, FINALLY ASHORE FOR YOU</span>
+                <h2 class="judul-botol-besar">Open when <span class="kata-found">found</span></h2>
+
+                <div class="wrapper-gambar-botol" onclick="bukaDanKetikSurat()">
+                    <svg viewBox="0 0 120 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+                        <path d="M52 22H68V32H52V22Z" fill="#B45309" stroke="#F472B6" stroke-width="1.5"/>
+                        <path d="M48 32H72V60H48V32Z" stroke="#F472B6" stroke-width="2.5" fill="none"/>
+                        <path d="M48 60L25 88V185C25 196 34 205 45 205H75C86 205 95 196 95 185V88L72 60H48Z" stroke="#F472B6" stroke-width="2.5" fill="rgba(244, 114, 182, 0.08)"/>
+                        <path d="M26 135C35 130 45 140 60 135C75 130 85 138 94 135V185C94 194 86 203 75 203H45C34 203 26 194 26 185V135Z" fill="#D97706" fill-opacity="0.8"/>
+                        <rect x="38" y="100" width="44" height="28" rx="3" fill="#FFFFFF" stroke="#F472B6" stroke-width="1"/>
+                        <line x1="43" y1="108" x2="77" y2="108" stroke="#2B0812" stroke-width="1.5" stroke-dasharray="2 2"/>
+                        <line x1="43" y1="114" x2="73" y2="114" stroke="#2B0812" stroke-width="1.5" stroke-dasharray="2 2"/>
+                        <path d="M32 92V175" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="petunjuk-tap-botol">TAP THE BOTTLE TO OPEN IT</div>
+            </div>
+
+            <div class="sec-surat-wrapper" id="sec-surat">
+                <div class="kotak-surat-elegan">
+                    <div class="header-surat-flex">
+                        <div class="judul-dear-you">Dear you,</div>
+                        <button class="btn-translate-icon" id="btnTranslateLetter" onclick="toggleTranslateLetter()"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2.1l1.1-3h3.6l1.1 3H22L18.5 10zm-2.62 7l1.62-4.41L19.12 17h-3.24z"/></svg> Translate</button>
+                    </div>
+                    <div class="isi-teks-ketik" id="targetTeksKetik"><span class="kursor-ketik" id="kursorAksen"></span></div>
+                    <div class="penutup-surat-kanan" id="penutupSurat">— with so much love, always</div>
+                </div>
+            </div>
+            
+            <div class="pembatas-arus-laut"><svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,15 C360,40 480,5 720,25 C960,40 1120,5 1440,20"></path></svg></div>
+        </section>
+
+        <!-- ================= URUTAN 6: WISHES ================= -->
+        <section class="section-bday-flow" id="sec-wishes">
+            <div class="sec-wishes-wrapper">
+                <span class="teks-kecil-tide">SENT WITH THE CURRENT, FOR YOU</span>
+                <h2 class="judul-aesthetic-miring" style="font-size: 1.8rem; margin-bottom: 8px;">Wishes for <span class="kata-found">the year ahead</span></h2>
+                <button class="btn-translate-icon" onclick="toggleTranslateWishes()"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2.1l1.1-3h3.6l1.1 3H22L18.5 10zm-2.62 7l1.62-4.41L19.12 17h-3.24z"/></svg> Translate Wishes</button>
+
+                <div class="grid-wishes-3kolom">
+                    <div class="kotak-wish-item">
+                        <div class="ikon-bulat-topleft"><svg class="ikon-svg-logo" viewBox="0 0 24 24"><path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 17c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/></svg></div>
+                        <p class="isi-teks-wish" data-en="May your heart always find calm waters, no matter how wild the ocean gets." data-id="Semoga hati kamu selalu nemuin ketenangan, seganas apa pun ombak di lautan.">May your heart always find calm waters, no matter how wild the ocean gets.</p>
+                    </div>
+                    <div class="kotak-wish-item">
+                        <div class="ikon-bulat-topleft"><svg class="ikon-svg-logo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
+                        <p class="isi-teks-wish" data-en="May every new morning bring you warmth, clarity, and reasons to smile." data-id="Semoga tiap pagi baru selalu ngebawa kehangatan, ketenangan, dan alasan buat kamu tersenyum.">May every new morning bring you warmth, clarity, and reasons to smile.</p>
+                    </div>
+                    <div class="kotak-wish-item">
+                        <div class="ikon-bulat-topleft"><svg class="ikon-svg-logo" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                        <p class="isi-teks-wish" data-en="May you never forget how brightly you shine, even on the darkest nights." data-id="Semoga kamu gak pernah lupa betapa indahnya kamu bersinar, bahkan di malam tergelap sekalipun.">May you never forget how brightly you shine, even on the darkest nights.</p>
+                    </div>
+                    <div class="kotak-wish-item">
+                        <div class="ikon-bulat-topleft"><svg class="ikon-svg-logo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+                        <p class="isi-teks-wish" data-en="May you always trust your way forward and know that you belong." data-id="Semoga kamu selalu yakin sama langkah kamu ke depan dan tahu kalau kamu itu sangat berharga.">May you always trust your way forward and know that you belong.</p>
+                    </div>
+                    <div class="kotak-wish-item">
+                        <div class="ikon-bulat-topleft"><svg class="ikon-svg-logo" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><line x1="12" y1="7" x2="12" y2="21"/><line x1="5" y1="10" x2="19" y2="10"/><path d="M5 15a7 7 0 0 0 14 0"/></svg></div>
+                        <p class="isi-teks-wish" data-en="May you stay grounded in who you are, surrounded by love." data-id="Semoga kamu tetep jadi diri kamu yang luar biasa, selalu dikelilingi sama rasa sayang.">May you stay grounded in who you are, surrounded by love.</p>
+                    </div>
+                    <div class="kotak-wish-item">
+                        <div class="ikon-bulat-topleft"><svg class="ikon-svg-logo" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+                        <p class="isi-teks-wish" data-en="May this year give back to you all the kindness you freely give." data-id="Semoga tahun ini ngebales balik semua kebaikan tulus yang selalu kamu bagiin ke orang lain.">May this year give back to you all the kindness you freely give.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pembatas-arus-laut" style="margin-top: 30px;"><svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,10 C300,35 500,5 720,22 C940,35 1140,0 1440,28"></path></svg></div>
+        </section>
+
+        <!-- ================= URUTAN 7: LILIN MATI ================= -->
+        <section class="section-bday-flow" id="sec-lilin" style="padding-bottom: 60px;">
+            <div class="sec-lilin-wrapper">
+                <span class="teks-kecil-tide" id="txt-lilin-sub">RESURFACING, ALMOST THERE</span>
+                <button class="btn-translate-icon" onclick="toggleTranslateLilinSub()"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2.1l1.1-3h3.6l1.1 3H22L18.5 10zm-2.62 7l1.62-4.41L19.12 17h-3.24z"/></svg> Translate</button>
+
+                <h2 class="judul-aesthetic-miring" id="txt-lilin-title-main" style="font-size: 1.8rem; margin-top: 6px; margin-bottom: 8px;">Happy Birthday, <span class="kata-found">truly.</span></h2>
+
+                <p class="paragraf-campuran" id="txt-lilin-desc-main">
+                    Thank you for being such a wonderful person in this world. Semoga di usia yang baru ini, setiap langkahmu selalu diiringi kebahagiaan, kesehatan, dan ketenangan hati. Make a wish and let the tide carry it to reality.
+                </p>
+
+                <div class="wrapper-5-lilin">
+                    <div class="batang-lilin lilin-1"><div class="sumbu-lilin"></div><div class="api-lilin" id="api-1"></div></div>
+                    <div class="batang-lilin lilin-2"><div class="sumbu-lilin"></div><div class="api-lilin" id="api-2"></div></div>
+                    <div class="batang-lilin lilin-3"><div class="sumbu-lilin"></div><div class="api-lilin" id="api-3"></div></div>
+                    <div class="batang-lilin lilin-4"><div class="sumbu-lilin"></div><div class="api-lilin" id="api-4"></div></div>
+                    <div class="batang-lilin lilin-5"><div class="sumbu-lilin"></div><div class="api-lilin" id="api-5"></div></div>
+                </div>
+
+                <div class="wrapper-setelah-padam" id="boxSetlahPadam">
+                    <div class="judul-wish-granted"><span style="color:#F472B6;">Wish</span> <span>granted.</span></div>
+                    <a href="https://wa.me/?text=Thank%20you%20for%20the%20birthday%20wishes!" target="_blank" class="btn-send-reply-wa">
+                        <svg class="ikon-wa-svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        Send a reply
+                    </a>
+                    <button class="btn-float-back" onclick="lompatKeSection('section-surface')">Float Back to Surface &uarr;</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- WIDGET APPLE MUSIC COMPACT -->
+    <div class="apple-music-container mode-mini" id="appleMusicWidget">
+        <div class="apple-window-header">
+            <div class="apple-dots"><div class="apple-dot red" id="btnMinimizeDot"></div><div class="apple-dot yellow"></div></div>
+            <button class="btn-toggle-size" id="btnTextToggle">▢</button>
+        </div>
+        <div class="area-foto-musik"><img id="img-music-cover" src="" alt="Cover Musik"></div>
+        <div class="judul-lagu" id="txt-music-title">Loading...</div>
+        <div class="penyanyi-lagu" id="txt-music-artist">Loading...</div>
+        <div class="bar-durasi-container"><div class="bar-durasi-fill" id="musicProgressBar"></div></div>
+        <div class="kontrol-musik-row">
+            <button class="tombol-audio-btn"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+            <button class="tombol-audio-btn play-mode" id="btnPlayPause"><svg id="svgPlayPauseTarget" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+            <button class="tombol-audio-btn"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6zm10-12h2v12h-2z"/></svg></button>
+        </div>
+        <svg class="mini-icon-svg" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+    </div>
+</div>
+
+<audio id="bdayAudioMain" src="" loop></audio>
+
+<!-- ================= JAVASCRIPT ENGINE ================= -->
+<script type="text/javascript">
+    let terUnlock = false;
+    let pengetikanSelesai = false;
+    let lilinDiMulai = false;
+
+    let modeTranslateIntro = false;
+    let modeTranslateChapSub = false;
+    let modeTranslateGallery = false;
+    let modeTranslateLetter = false;
+    let modeTranslateWishes = false;
+    let modeTranslateLilinSub = false;
+
+    /* LOGIKA OTOMATIS DETEKSI ORIENTASI LAYAR */
+    let warningDitutupManual = false;
+
+    function cekOrientasiLayar() {
+        const warningEl = document.getElementById('landscape-warning');
+        if (!warningEl || warningDitutupManual) return;
+
+        if (window.innerHeight > window.innerWidth && window.innerWidth <= 900) {
+            warningEl.classList.add('tampil');
+        } else {
+            warningEl.classList.remove('tampil');
+        }
+    }
+
+    function tutupWarningLandscape() {
+        const warningEl = document.getElementById('landscape-warning');
+        if (warningEl) {
+            warningEl.classList.remove('tampil');
+            warningDitutupManual = true;
+        }
+    }
+
+    window.addEventListener('resize', cekOrientasiLayar);
+    window.addEventListener('orientationchange', cekOrientasiLayar);
+
+    function terapkanKonfigurasi() {
+        document.getElementById('nav-recipient-name').innerText = CONFIG_SAYA.namaPenerima + "'s Birthday";
+        document.getElementById('bdayAudioMain').src = CONFIG_SAYA.audioUrl;
+        document.getElementById('txt-music-title').innerText = CONFIG_SAYA.judulLagu;
+        document.getElementById('txt-music-artist').innerText = CONFIG_SAYA.penyanyiLagu;
+        document.getElementById('img-music-cover').src = CONFIG_SAYA.fotoCoverLaguPotret;
+
+        // Foto Pacar
+        document.getElementById('img-gallery-1').src = CONFIG_SAYA.foto1; document.getElementById('txt-foto-1').innerText = CONFIG_SAYA.teksFoto1;
+        document.getElementById('img-gallery-2').src = CONFIG_SAYA.foto2; document.getElementById('txt-foto-2').innerText = CONFIG_SAYA.teksFoto2;
+        document.getElementById('img-gallery-3').src = CONFIG_SAYA.foto3; document.getElementById('txt-foto-3').innerText = CONFIG_SAYA.teksFoto3;
+
+        // Foto Kamu
+        document.getElementById('img-gallery-kamu-1').src = CONFIG_SAYA.fotoKamu1; document.getElementById('txt-foto-kamu-1').innerText = CONFIG_SAYA.teksFotoKamu1;
+        document.getElementById('img-gallery-kamu-2').src = CONFIG_SAYA.fotoKamu2; document.getElementById('txt-foto-kamu-2').innerText = CONFIG_SAYA.teksFotoKamu2;
+
+        // Chapter
+        document.getElementById('txt-chap1-title').innerText = CONFIG_SAYA.chapter1Title; document.getElementById('txt-chap1-desc').innerText = CONFIG_SAYA.chapter1Desc;
+        document.getElementById('txt-chap2-title').innerText = CONFIG_SAYA.chapter2Title; document.getElementById('txt-chap2-desc').innerText = CONFIG_SAYA.chapter2Desc;
+        document.getElementById('txt-chap3-title').innerText = CONFIG_SAYA.chapter3Title; document.getElementById('txt-chap3-desc').innerText = CONFIG_SAYA.chapter3Desc;
+        document.getElementById('txt-chap4-title').innerText = CONFIG_SAYA.chapter4Title; document.getElementById('txt-chap4-desc').innerText = CONFIG_SAYA.chapter4Desc;
+    }
+
+    /* LOGIKA TRANSLATE INTERAKTIF SANGAT NATURAL & LENGKAP */
+    const ikonTranslateSVG = `<svg viewBox="0 0 24 24" style="width:10px;height:10px;fill:currentColor;"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2.1l1.1-3h3.6l1.1 3H22L18.5 10zm-2.62 7l1.62-4.41L19.12 17h-3.24z"/></svg>`;
+
+    function toggleTranslateIntro() {
+        const el = document.getElementById('txt-intro-main');
+        const btn = event.currentTarget;
+        if (!modeTranslateIntro) {
+            el.innerText = "Di suatu tempat di seberang lautan, ada sebuah surat yang udah lama nunggu hari ini. Coba scroll ke bawah deh, ombaknya lagi naik, dan ternyata dia ngebawa sesuatu yang spesial khusus buat kamu.";
+            btn.innerHTML = `${ikonTranslateSVG} Original`;
+            modeTranslateIntro = true;
+        } else {
+            el.innerText = "Somewhere past the breakers, ada a letter yang udah lama waiting for this day. Scroll down, the tide is coming in, dan ternyata dia bawa something special just for kamu.";
+            btn.innerHTML = `${ikonTranslateSVG} Translate`;
+            modeTranslateIntro = false;
+        }
+    }
+
+    function toggleTranslateChapSub() {
+        const elSub = document.getElementById('txt-header-chap-sub');
+        const elTitle = document.getElementById('txt-chap-title-main');
+        const elDesc = document.getElementById('txt-chap-desc-main');
+        const btn = event.currentTarget;
+
+        if (!modeTranslateChapSub) {
+            elSub.innerText = "PERJALANAN DIMULAI, SIAP GAK?";
+            elTitle.innerHTML = `Bab demi bab dari <span class="gradasi-emas-kuning">cerita kita</span>`;
+            elDesc.innerText = "Setiap hubungan pasti punya alurnya sendiri, ada hari yang tenang, ada momen yang penuh ombak, dan ada momen-momen kecil yang mungkin hampir terlupakan. Ini beberapa kenangan yang pantes buat muncul kembali ke permukaan.";
+            
+            // Translate Kartu-Kartu Chapter
+            document.getElementById('label-sub-chap1').innerText = "bab 01";
+            document.getElementById('label-head-chap1').innerText = "BAB SATU";
+            document.getElementById('txt-chap1-title').innerText = CONFIG_SAYA.chapter1TitleID;
+            document.getElementById('txt-chap1-desc').innerText = CONFIG_SAYA.chapter1DescID;
+
+            document.getElementById('label-sub-chap2').innerText = "bab 02";
+            document.getElementById('label-head-chap2').innerText = "BAB DUA";
+            document.getElementById('txt-chap2-title').innerText = CONFIG_SAYA.chapter2TitleID;
+            document.getElementById('txt-chap2-desc').innerText = CONFIG_SAYA.chapter2DescID;
+
+            document.getElementById('label-sub-chap3').innerText = "bab 03";
+            document.getElementById('label-head-chap3').innerText = "BAB TIGA";
+            document.getElementById('txt-chap3-title').innerText = CONFIG_SAYA.chapter3TitleID;
+            document.getElementById('txt-chap3-desc').innerText = CONFIG_SAYA.chapter3DescID;
+
+            document.getElementById('label-sub-chap4').innerText = "bab 04";
+            document.getElementById('label-head-chap4').innerText = "BAB EMPAT";
+            document.getElementById('txt-chap4-title').innerText = CONFIG_SAYA.chapter4TitleID;
+            document.getElementById('txt-chap4-desc').innerText = CONFIG_SAYA.chapter4DescID;
+
+            btn.innerHTML = `${ikonTranslateSVG} Original`;
+            modeTranslateChapSub = true;
+        } else {
+            elSub.innerText = "THE DESCENT BEGINS, ARE YOU READY";
+            elTitle.innerHTML = `Chapters from <span class="gradasi-emas-kuning">our story</span>`;
+            elDesc.innerText = "Every relationship has its own currents, ada hari yang calm, ada momen yang penuh waves, dan ada little moments yang mungkin hampir terlupakan. Here are a few memories yang deserve to come back to the surface.";
+            
+            // Kembalikan Ke Original (Inggris)
+            document.getElementById('label-sub-chap1').innerText = "chapter 01";
+            document.getElementById('label-head-chap1').innerText = "CHAPTER ONE";
+            document.getElementById('txt-chap1-title').innerText = CONFIG_SAYA.chapter1Title;
+            document.getElementById('txt-chap1-desc').innerText = CONFIG_SAYA.chapter1Desc;
+
+            document.getElementById('label-sub-chap2').innerText = "chapter 02";
+            document.getElementById('label-head-chap2').innerText = "CHAPTER TWO";
+            document.getElementById('txt-chap2-title').innerText = CONFIG_SAYA.chapter2Title;
+            document.getElementById('txt-chap2-desc').innerText = CONFIG_SAYA.chapter2Desc;
+
+            document.getElementById('label-sub-chap3').innerText = "chapter 03";
+            document.getElementById('label-head-chap3').innerText = "CHAPTER THREE";
+            document.getElementById('txt-chap3-title').innerText = CONFIG_SAYA.chapter3Title;
+            document.getElementById('txt-chap3-desc').innerText = CONFIG_SAYA.chapter3Desc;
+
+            document.getElementById('label-sub-chap4').innerText = "chapter 04";
+            document.getElementById('label-head-chap4').innerText = "CHAPTER FOUR";
+            document.getElementById('txt-chap4-title').innerText = CONFIG_SAYA.chapter4Title;
+            document.getElementById('txt-chap4-desc').innerText = CONFIG_SAYA.chapter4Desc;
+
+            btn.innerHTML = `${ikonTranslateSVG} Translate`;
+            modeTranslateChapSub = false;
+        }
+    }
+
+    function toggleTranslateLilinSub() {
+        const elSub = document.getElementById('txt-lilin-sub');
+        const elTitle = document.getElementById('txt-lilin-title-main');
+        const elDesc = document.getElementById('txt-lilin-desc-main');
+        const btn = event.currentTarget;
+
+        if (!modeTranslateLilinSub) {
+            elSub.innerText = "KEMBALI KE PERMUKAAN, DIKIT LAGI SAMPAI";
+            elTitle.innerHTML = `Selamat Ulang Tahun, <span class="kata-found">setulusnya.</span>`;
+            elDesc.innerText = "Makasih ya udah jadi orang yang luar biasa di dunia ini. Semoga di usia yang baru ini, setiap langkah kamu selalu diiringi kebahagiaan, kesehatan, dan ketenangan hati. Make a wish dan biarin ombak ngebawa impian kamu jadi kenyataan.";
+            btn.innerHTML = `${ikonTranslateSVG} Original`;
+            modeTranslateLilinSub = true;
+        } else {
+            elSub.innerText = "RESURFACING, ALMOST THERE";
+            elTitle.innerHTML = `Happy Birthday, <span class="kata-found">truly.</span>`;
+            elDesc.innerText = "Thank you for being such a wonderful person in this world. Semoga di usia yang baru ini, setiap langkahmu selalu diiringi kebahagiaan, kesehatan, dan ketenangan hati. Make a wish and let the tide carry it to reality.";
+            btn.innerHTML = `${ikonTranslateSVG} Translate`;
+            modeTranslateLilinSub = false;
+        }
+    }
+
+    function toggleTranslateGallery() {
+        const btn = event.currentTarget;
+        if (!modeTranslateGallery) {
+            document.getElementById('txt-foto-1').innerText = CONFIG_SAYA.teksFoto1ID;
+            document.getElementById('txt-foto-2').innerText = CONFIG_SAYA.teksFoto2ID;
+            document.getElementById('txt-foto-3').innerText = CONFIG_SAYA.teksFoto3ID;
+            document.getElementById('txt-foto-kamu-1').innerText = CONFIG_SAYA.teksFotoKamu1ID;
+            document.getElementById('txt-foto-kamu-2').innerText = CONFIG_SAYA.teksFotoKamu2ID;
+            btn.innerHTML = `${ikonTranslateSVG} Original Captions`;
+            modeTranslateGallery = true;
+        } else {
+            document.getElementById('txt-foto-1').innerText = CONFIG_SAYA.teksFoto1;
+            document.getElementById('txt-foto-2').innerText = CONFIG_SAYA.teksFoto2;
+            document.getElementById('txt-foto-3').innerText = CONFIG_SAYA.teksFoto3;
+            document.getElementById('txt-foto-kamu-1').innerText = CONFIG_SAYA.teksFotoKamu1;
+            document.getElementById('txt-foto-kamu-2').innerText = CONFIG_SAYA.teksFotoKamu2;
+            btn.innerHTML = `${ikonTranslateSVG} Translate Captions`;
+            modeTranslateGallery = false;
+        }
+    }
+
+    function toggleTranslateLetter() {
+        if (!pengetikanSelesai) return;
+        const elTarget = document.getElementById('targetTeksKetik');
+        const btn = document.getElementById('btnTranslateLetter');
+        
+        if (!modeTranslateLetter) {
+            elTarget.innerHTML = CONFIG_SAYA.teksSuratDearYouID.replace(/\n/g, '<br>');
+            btn.innerHTML = `${ikonTranslateSVG} Original`;
+            modeTranslateLetter = true;
+        } else {
+            elTarget.innerHTML = CONFIG_SAYA.teksSuratDearYou.replace(/\n/g, '<br>');
+            btn.innerHTML = `${ikonTranslateSVG} Translate`;
+            modeTranslateLetter = false;
+        }
+    }
+
+    function toggleTranslateWishes() {
+        const wishes = document.querySelectorAll('.isi-teks-wish');
+        const btn = event.currentTarget;
+        if (!modeTranslateWishes) {
+            wishes.forEach(item => { item.innerText = item.getAttribute('data-id'); });
+            btn.innerHTML = `${ikonTranslateSVG} Original Wishes`;
+            modeTranslateWishes = true;
+        } else {
+            wishes.forEach(item => { item.innerText = item.getAttribute('data-en'); });
+            btn.innerHTML = `${ikonTranslateSVG} Translate Wishes`;
+            modeTranslateWishes = false;
+        }
+    }
+
+    function lompatKeSection(idSection) {
+        const target = document.getElementById(idSection);
+        if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+    }
+
+    function bukaDanKetikSurat() {
+        const secSurat = document.getElementById('sec-surat');
+        secSurat.classList.add('muncul');
+        setTimeout(() => { secSurat.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 200);
+
+        if (!pengetikanSelesai) {
+            let index = 0;
+            const elTarget = document.getElementById('targetTeksKetik');
+            const kursor = document.getElementById('kursorAksen');
+            const penutup = document.getElementById('penutupSurat');
+
+            function ketikHuruf() {
+                if (index < CONFIG_SAYA.teksSuratDearYou.length) {
+                    const char = CONFIG_SAYA.teksSuratDearYou.charAt(index);
+                    if (char === '\n') { elTarget.insertBefore(document.createElement('br'), kursor); } 
+                    else { elTarget.insertBefore(document.createTextNode(char), kursor); }
+                    index++;
+                    setTimeout(ketikHuruf, 30);
+                } else {
+                    penutup.style.opacity = '1';
+                    pengetikanSelesai = true;
+                    cekKondisiMulaiLilin();
+                }
+            }
+            setTimeout(ketikHuruf, 400);
+        }
+    }
+
+    function jalankanMatiLilin() {
+        if (lilinDiMulai) return;
+        lilinDiMulai = true;
+        let lilinSkrg = 1;
+
+        const intervalLilin = setInterval(() => {
+            const apiEl = document.getElementById(`api-${lilinSkrg}`);
+            if (apiEl) apiEl.classList.add('padam');
+            lilinSkrg++;
+
+            if (lilinSkrg > 5) {
+                clearInterval(intervalLilin);
+                setTimeout(() => { document.getElementById('boxSetlahPadam').classList.add('aktif'); }, 500);
+            }
+        }, 1000);
+    }
+
+    function cekKondisiMulaiLilin() {
+        if (!pengetikanSelesai || lilinDiMulai) return;
+        
+        const secLilin = document.getElementById('sec-lilin');
+        if (secLilin) {
+            const rect = secLilin.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.75) { 
+                jalankanMatiLilin(); 
+            }
+        }
+    }
+
+    function handleGlobalScrollTimeline() {
+        if (!terUnlock) return;
+        window.requestAnimationFrame(() => {
+            const windowHeight = window.innerHeight;
+
+            for (let i = 1; i <= 4; i++) {
+                const babEl = document.getElementById(`item-bab-${i}`);
+                if (babEl) {
+                    const rect = babEl.getBoundingClientRect();
+                    const progressLine = babEl.querySelector('.jalur-emas-progress');
+                    if (rect.top < windowHeight / 1.6) {
+                        babEl.classList.add('lewat-scroll');
+                        if (progressLine) {
+                            const fillPercentage = Math.min(Math.max(((windowHeight / 1.6 - rect.top) / rect.height) * 100, 0), 100);
+                            progressLine.style.height = `${fillPercentage}%`;
+                        }
+                    } else {
+                        babEl.classList.remove('lewat-scroll');
+                        if (progressLine) progressLine.style.height = '0%';
+                    }
+                }
+            }
+
+            cekKondisiMulaiLilin();
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        terapkanKonfigurasi();
+        cekOrientasiLayar();
+
+        const inputsSandi = document.querySelectorAll('.kotak-input-sandi');
+        const btnUnlock = document.getElementById('btnUnlockTrigger');
+        const kartuSandi = document.getElementById('blokKartuSandi');
+        const svgPlayPauseTarget = document.getElementById('svgPlayPauseTarget');
+
+        const ikonPlaySVG = '<path d="M8 5v14l11-7z"/>';
+        const ikonPauseSVG = '<path d="M6 19h4V5H6zm8-14v14h4V5z"/>';
+
+        document.getElementById('bday-root-container').addEventListener('scroll', handleGlobalScrollTimeline, { passive: true });
+
+        inputsSandi.forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                if (e.target.value.length > 1) {
+                    e.target.value = e.target.value.slice(-1);
+                }
+                if (e.target.value.length === 1 && index < inputsSandi.length - 1) {
+                    inputsSandi[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && input.value === "" && index > 0) {
+                    inputsSandi[index - 1].focus();
+                } else if (e.key === 'Enter') {
+                    eksekusiValidasiSandi();
+                }
+            });
+        });
+
+        function dapatkanStringSandi() {
+            let gabunganKode = "";
+            inputsSandi.forEach(input => { gabunganKode += input.value; });
+            return gabunganKode;
+        }
+
+        btnUnlock.addEventListener('click', eksekusiValidasiSandi);
+
+        function eksekusiValidasiSandi() {
+            const inputUser = dapatkanStringSandi();
+            const targetPin = (typeof CONFIG_SAYA !== 'undefined' && CONFIG_SAYA.pinRahasia) ? CONFIG_SAYA.pinRahasia : "3015";
+
+            if (inputUser === targetPin) {
+                const audio = document.getElementById('bdayAudioMain');
+                if (audio) {
+                    audio.play().then(() => {
+                        svgPlayPauseTarget.innerHTML = ikonPauseSVG;
+                    }).catch((e) => {
+                        console.log("Audio play prevented:", e);
+                    });
+                }
+                document.getElementById('page-sandi').style.display = 'none';
+                document.getElementById('main-scroll-wrapper').style.display = 'block';
+                terUnlock = true;
+            } else {
+                kartuSandi.classList.add('sandi-salah-animasi');
+                setTimeout(() => {
+                    kartuSandi.classList.remove('sandi-salah-animasi');
+                    inputsSandi.forEach(input => { input.value = ""; });
+                    if(inputsSandi[0]) inputsSandi[0].focus();
+                }, 400);
+            }
+        }
+
+        const audioEl = document.getElementById('bdayAudioMain');
+        const btnPlayPause = document.getElementById('btnPlayPause');
+        const progressBar = document.getElementById('musicProgressBar');
+
+        btnPlayPause.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (audioEl.paused) { 
+                audioEl.play(); 
+                svgPlayPauseTarget.innerHTML = ikonPauseSVG; 
+            } else { 
+                audioEl.pause(); 
+                svgPlayPauseTarget.innerHTML = ikonPlaySVG; 
+            }
+        });
+
+        audioEl.addEventListener('timeupdate', function() {
+            if (audioEl.duration) {
+                progressBar.style.width = (audioEl.currentTime / audioEl.duration) * 100 + '%';
+            }
+        });
+
+        const widgetAudio = document.getElementById('appleMusicWidget');
+        const btnMinimizeDot = document.getElementById('btnMinimizeDot');
+        const btnTextToggle = document.getElementById('btnTextToggle');
+
+        function toggleWidgetSize(e) {
+            if (e) e.stopPropagation();
+            if (widgetAudio.classList.contains('mode-mini')) {
+                widgetAudio.classList.remove('mode-mini');
+                btnTextToggle.innerText = "Minimize";
+            } else {
+                widgetAudio.classList.add('mode-mini');
+                btnTextToggle.innerText = "▢";
+            }
+        }
+
+        btnMinimizeDot.addEventListener('click', toggleWidgetSize);
+        btnTextToggle.addEventListener('click', toggleWidgetSize);
+        widgetAudio.addEventListener('click', function(e) {
+            if (widgetAudio.classList.contains('mode-mini')) toggleWidgetSize(e);
+        });
+    });
+</script>
+</body>
+</html>
